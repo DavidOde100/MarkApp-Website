@@ -133,6 +133,10 @@ h6 {
     font-size: 22px;
 }
 
+.logo img {
+    max-width: 100px; /* Adjust the desired maximum width */
+    max-height: 50px; /* Adjust the desired maximum height */
+}
 /* Home */
 .back {
     background-image: url(img/LOKI\ APP\ DESIGN.png);
