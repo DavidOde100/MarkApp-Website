@@ -201,12 +201,12 @@ h6 {
 }
 
 .hero-text .header-btn .btn-one {
-    color: #fff;
+    color: #646EE5;
 
 }
 
 .hero-text .header-btn .btn-one {
-    color: #fff;
+    color: #646EE5;
     
 }
 
@@ -221,6 +221,7 @@ h6 {
     z-index: -1;
     transition: all 0.3s ease;
     background-position: right center;
+    
 }
 
 .hero-text .header-btn .btn-one:hover ::before {
