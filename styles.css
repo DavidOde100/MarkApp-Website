@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -16,6 +20,13 @@ a {
 
 li {
     list-style: none;
+}
+
+.offset::before {
+    display: block;
+    content: "";
+    height: 10rem;
+    margin-top: -2rem;
 }
 
 h3 {
@@ -62,6 +73,12 @@ h6 {
     background: transparent;
     transition: all 0.5s ease;
     z-index: 100000;
+}
+
+.nav .scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+    box-shadow: 7px 10px 15px rgba(0,0,0,0.3);
 }
 
 .nav .navbar-toggler {
@@ -133,10 +150,6 @@ h6 {
     font-size: 22px;
 }
 
-.logo img {
-    max-width: 100px; /* Adjust the desired maximum width */
-    max-height: 50px; /* Adjust the desired maximum height */
-}
 /* Home */
 .back {
     background-image: url(img/LOKI\ APP\ DESIGN.png);
@@ -201,13 +214,8 @@ h6 {
 }
 
 .hero-text .header-btn .btn-one {
-    color: #646EE5;
+    color: #fff;
 
-}
-
-.hero-text .header-btn .btn-one {
-    color: #646EE5;
-    
 }
 
 .hero-text .header-btn .btn-one ::before {
@@ -221,7 +229,6 @@ h6 {
     z-index: -1;
     transition: all 0.3s ease;
     background-position: right center;
-    
 }
 
 .hero-text .header-btn .btn-one:hover ::before {
@@ -550,7 +557,7 @@ h6 {
     background-image: linear-gradient(to right, #535CF1, #A147E4);
     color: #fff;
     border: none;
-    font-size: 180px;
+    font-size: 18px;
     font-weight: normal;
     outline: none;
 }
@@ -569,8 +576,390 @@ footer .row-one {
     align-items: center;
 }
 
+footer .row-one ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 footer .row-one a {
     padding-right: 20px;
     font-size: 26px;
-    color: #6c6c6c
+    color: #6c6c6c;
+}
+
+footer .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .second-row h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #6c6c6c;
+    padding-bottom: 20px;
+}
+
+footer .second-row li {
+    padding-bottom: 12px;
+}
+
+footer .second-row li a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #121212
+}
+
+footer .second-row .first-row:nth-child(4) {
+    max-width: 300px;
+}
+
+footer .second-row .newsletter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 5px;
+}
+
+footer .second-row .newsletter input {
+    width: 100%;
+    height: 44px;
+    border-radius: 50px;
+    padding: 0 24px;
+    border: 0;
+    background-color: rgba(33, 33, 33, 0.12);
+    font-weight: 500;
+    outline: none
+}
+
+footer .second-row .newsletter input::placeholder {
+    opacity: 1;
+    color: #6c6c6c;
+}
+
+footer .second-row .newsletter button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 0;
+    font-size: 20px;
+    color: #121212;
+    background-color: none;
+    cursor: pointer;
+}
+
+footer .second-row .text {
+    margin-top: 16px;
+}
+
+.copyright {
+    background-color: #2b354f;
+    padding: 23px 0;
+}
+
+.copyright p {
+    text-align: center;
+    color: #fff;
+}
+
+.copyright p a {
+    color: #1ABC9C;
+}
+
+@media only screen and (max-width: 946px) {
+
+    .nav {
+        padding: 1rem 3rem;
+    }
+
+    .nav .navbar-social {
+        display: none;
+    }
+
+    .hero-text {
+       width: 60%;
+    }
+
+    .hero-text h3 {
+        font-size: 33px;
+    }
+
+    #wrapper {
+        margin: 3rem 3rem 10rem 3rem;
+    }
+    
+    .service {
+        margin-bottom: 3rem;
+    }
+
+    .service h6 {
+        margin-bottom: 3rem; 
+    }
+
+    .service .service-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .service .service-content .box {
+        width: 100%;
+    }
+
+    .service .service-content .box .box-one {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service .service-content .service-img {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    
+    .pricing .table {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .pricing .basic {
+        margin-bottom: 3rem;
+    }
+
+    .callToAct {
+        margin-bottom: 5rem;
+    }
+    
+    .callToAct .parallax {
+        width: 80%;
+    }
+    
+    .contact .form {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 774px) {
+    .nav {
+        padding: 0.7rem 1rem;
+    }
+    
+    .nav .navbar-toggler {
+        display: block;
+        position: absolute;
+        top: 26px;
+        right: 16px;
+        z-index: 1000000;
+    }
+
+    .nav .menu-bar {
+        position: fixed;
+        top: 55px;
+        right: -360px;
+        width: 300px;
+        height: 100vh;
+        background-color: rgba(256, 256, 255, 0.9);
+        transition: all 0.6s ease;
+    }
+    
+    .nav .menu-bar .menu-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: justify;
+        padding: 40px 0;
+    }
+    
+    .nav .menu-bar .menu-items li {
+        margin: 2rem 30px;
+    }
+
+    .hero-text {
+        width: 80%;
+    }
+ 
+     .hero-text h6 {
+         font-size: 16px;
+    }
+
+    #wrapper {
+        margin: 3rem 1rem 10rem 1rem;
+    }
+    
+    .service h3 {
+        font-size: 33px;
+    }
+
+    .service h6 {
+        font-size: 16px;
+    }
+    
+    .service .service-content .service-img {
+        width: 90%;
+        margin-bottom: 5rem;
+    }
+
+    .pricing h3 {
+        font-size: 33px;
+    }
+
+    .pricing h6 {
+        font-size: 16px;
+    }
+    
+    .pricing .table {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    
+    .pricing .basic {
+        margin-bottom: 3rem;
+    }
+    
+    .callToAct .parallax {
+        width: 90%;
+    }
+
+    .callToAct .parallax h3 {
+        font-size: 33px;
+    }
+
+    .callToAct .parallax h6 {
+        font-size: 16px;
+    }
+
+    .callToAct .parallax .call-news input {
+        font-size: 16px;
+    }
+
+    .callToAct .parallax .call-news button {
+        font-size: 15px;
+    }
+
+    .contact h3 {
+        font-size: 33px;
+    }
+
+    .contact h6 {
+        font-size: 16px;
+    }
+    
+    .contact .form {
+        width: 80%;
+    }
+
+    .contact .form .header-btn a {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 4rem 1rem;
+    }
+
+    footer .second-row {
+        flex-wrap: wrap;
+    }
+
+    footer .second-row .first-row {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media only screen and (max-width: 541px) {
+    
+    .hero-text h3 {
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+    .hero-text .header-btn li a.main-btn {
+        margin-top: 0.7rem;
+    }
+
+    .hero-text .header-btn li a.main-btn {
+        font-size: 15px;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .service h6 {
+        text-align: justify;
+    }
+    
+    .service .service-content .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .service .service-content .box .box-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .callToAct .parallax h3 {
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+    .callToAct .parallax .call-news {
+        width: 300px;
+        height: 55px;
+        padding: 12px 0 12px 0;
+        display: block;
+        vertical-align: middle; 
+        align-items: center;
+    }
+
+    .callToAct .parallax .call-news button {
+        font-size: 13px;
+        position: relative;
+        margin: 35px 0 0 0;
+        background: #fff;
+        color: #8B16D1;
+
+    }
+
+    .contact .form {
+        width: 100%;
+    }
+
+    .contact .form .first-row, .contact .form .first-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .contact .form .first-row {
+        margin: 0 0;
+    }
+
+    .contact .form .first-row input, .contact .form .first-row input {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
 }
